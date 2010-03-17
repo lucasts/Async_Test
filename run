@@ -1,0 +1,92 @@
+#!/bin/bash
+#
+# author: Lucas Stephanou
+# source: http://github.com/lucasts/Async_Test
+#
+
+echo "*******************************************"
+echo "******Evented/NIO Benchmark****************"
+
+## definitions
+
+ab="/usr/sbin/ab"
+
+reqs=$1
+conc=$2
+
+#default port
+port=8123
+
+implementations=( "tornado" "thin" "twisted" "nodejs" "apache") 
+cmds=( "python tornado/hello.py" "thin start -R -p "$port" thin/hello.ru" "python twisted/hello.py" "node nodejs/hello.js" "")
+
+apache_test_url="http://127.0.0.1/~lucas/async.html" 
+summaryfile=summary.txt
+
+
+# clean results
+rm -Rf ./results/*
+rm $summaryfile
+touch $summaryfile
+
+# go go go
+x=0
+while [ $x != ${#implementations[@]} ]
+do
+   resultfile="results/"${implementations[$x]}".txt"
+  
+   echo "Starting " ${implementations[$x]}
+   touch $resultfile 
+
+   echo "  >> "${cmds[$x]}
+   ${cmds[$x]} & 
+   spid=$!
+
+   sleep 3
+
+   echo "  >> benchmarking..."
+   for i in 1 2 3 4 5
+   do 
+      echo " >> ab $i"
+      if [ ${implementations[$x]} == "apache" ]
+      then
+          $ab -n $reqs -c $conc $apache_test_url >> $resultfile
+      else
+          $ab -n $reqs -c $conc "http://127.0.0.1:"$port"/" >> $resultfile
+      fi
+   done
+
+   echo "  >> calculating results..."
+      avg=$(egrep 'Requests per second.*([1-9]*)' $resultfile|awk '{sum += $4;}END{print sum/5}')
+      echo ""${implementations[$x]}":"$avg"" >> $summaryfile
+
+   # debug #echo ""${implementations[$x]}" : "${files[$x]}""
+   
+   trash=$(/bin/kill $spid > /dev/null 2> /dev/null)
+   stty echo
+
+   let "x = x +1"
+done
+
+echo "*******************************************"
+echo "Summary file ok"
+
+# test mathplotlib
+mpl=$(python -c ' 
+try:
+  import pylab
+  print 0
+except:
+  print 1
+')
+
+if [ "$mpl" = "0" ]; then
+    echo "******mathplotlib ok - gererating graph****"
+    python plot.py
+fi
+
+
+
+
+
+

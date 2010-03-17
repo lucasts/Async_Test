@@ -1,0 +1,67 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 15522 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+
+
+Server Software:        TwistedWeb/8.2.0
+Server Hostname:        127.0.0.1
+Server Port:            8123
+
+Document Path:          /
+Document Length:        13 bytes
+
+Concurrency Level:      500
+Time taken for tests:   39.552 seconds
+Complete requests:      50000
+Failed requests:        0
+Write errors:           0
+Total transferred:      7001260 bytes
+HTML transferred:       650117 bytes
+Requests per second:    1264.17 [#/sec] (mean)
+Time per request:       395.517 [ms] (mean)
+Time per request:       0.791 [ms] (mean, across all concurrent requests)
+Transfer rate:          172.87 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  234 1570.6      2   21029
+Processing:    16  106 109.2    114    9992
+Waiting:       14  105 109.1    112    9992
+Total:         17  341 1593.8    116   21887
+
+Percentage of the requests served within a certain time (ms)
+  50%    116
+  66%    120
+  75%    120
+  80%    124
+  90%    128
+  95%    217
+  98%   3133
+  99%   9076
+ 100%  21887 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 7964 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 29821 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 6974 requests completed

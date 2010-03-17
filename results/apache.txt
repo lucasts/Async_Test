@@ -1,0 +1,104 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 40610 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+
+
+Server Software:        Apache/2.2.12
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /~lucas/async.html
+Document Length:        12 bytes
+
+Concurrency Level:      500
+Time taken for tests:   17.017 seconds
+Complete requests:      50000
+Failed requests:        0
+Write errors:           0
+Total transferred:      14200000 bytes
+HTML transferred:       600000 bytes
+Requests per second:    2938.32 [#/sec] (mean)
+Time per request:       170.165 [ms] (mean)
+Time per request:       0.340 [ms] (mean, across all concurrent requests)
+Transfer rate:          814.92 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   26 282.4      3    9000
+Processing:     0  122 659.7     34   13149
+Waiting:        0  120 659.7     33   13149
+Total:         19  148 765.8     37   13149
+
+Percentage of the requests served within a certain time (ms)
+  50%     37
+  66%     41
+  75%     44
+  80%     45
+  90%     50
+  95%     60
+  98%   2372
+  99%   3836
+ 100%  13149 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 22938 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Total of 49885 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+
+
+Server Software:        Apache/2.2.12
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /~lucas/async.html
+Document Length:        12 bytes
+
+Concurrency Level:      500
+Time taken for tests:   36.528 seconds
+Complete requests:      50000
+Failed requests:        0
+Write errors:           0
+Total transferred:      14200000 bytes
+HTML transferred:       600000 bytes
+Requests per second:    1368.83 [#/sec] (mean)
+Time per request:       365.276 [ms] (mean)
+Time per request:       0.731 [ms] (mean, across all concurrent requests)
+Transfer rate:          379.64 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   18 190.4      6    9009
+Processing:     0  164 1220.8     33   36492
+Waiting:        0  161 1220.9     30   36492
+Total:         11  182 1235.3     40   36522
+
+Percentage of the requests served within a certain time (ms)
+  50%     40
+  66%     45
+  75%     51
+  80%     53
+  90%     68
+  95%     85
+  98%    618
+  99%   4949
+ 100%  36522 (longest request)
