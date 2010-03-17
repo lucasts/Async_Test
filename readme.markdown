@@ -33,9 +33,14 @@ Running
 1. go to bench dir created by git clone(a.k.a: cd Async_Test)
 1. verify if requeriments and optionals are installed
 1. run the benchmark script
-  1.  # ./run 2000 200
-  1. where 2000 is number of requests and 200 is concurrency level
+  * ./run 2000 200
+  * where 2000 is number of requests and 200 is concurrency level
 1. after 2 minutes(depending on your computer) it will finish with a graph(if matplotlib ok).
 1. if doesn't have matplotlib installed, just run `cat summary.txt`
 
+
+Credits
+-------
+
+Idea from Akita [post](http://akitaonrails.com/2010/03/16/brincando-com-node-js-tornado-and-thin)
 
